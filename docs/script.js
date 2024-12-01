@@ -1,4 +1,4 @@
-const API_URL = 'https://dialogflow.googleapis.com/v2/projects/YOUR_PROJECT_ID/agent/sessions/YOUR_SESSION_ID:detectIntent'; // Sustituye con tu URL de API
+const API_URL = 'https://dialogflow.googleapis.com/v2/projects/galvanic-idiom-443423-p6/agent/sessions/'user-session-12345':detectIntent'; // Sustituye con tu URL de API
 const API_KEY = 'AIzaSyBL9AONfGo4oqDbOhIZ2-rd0FdIfdB9ezk';  // Sustituye por tu clave de API
 
 // Función para enviar una solicitud de texto a Dialogflow
