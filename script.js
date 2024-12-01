@@ -1,4 +1,4 @@
-const API_URL = 'https://dialogflow.googleapis.com/v2/projects/{PROJECT_ID}/agent/sessions/{newagent-jfce}:detectIntent'; 
+const API_URL = 'https://dialogflow.googleapis.com/v2/projects/{newagent-jfce}/agent/sessions/{newagent-jfce}:detectIntent'; 
 const API_KEY = 'AIzaSyBL9AONfGo4oqDbOhIZ2-rd0FdIfdB9ezk';  // Sustituye por tu clave de API
 
 // Función para enviar una solicitud de texto a Dialogflow
