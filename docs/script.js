@@ -1,16 +1,16 @@
-const API_URL = 'https://dialogflow.googleapis.com/v2/projects/galvanic-idiom-443423-p6/agent/sessions/'user-session-12345':detectIntent'; // Sustituye con tu URL de API
-const API_KEY = 'AIzaSyBL9AONfGo4oqDbOhIZ2-rd0FdIfdB9ezk';  // Sustituye por tu clave de API
+const API_URL = 'https://dialogflow.googleapis.com/v2/projects/galvanic-idiom-443423-p6/agent/sessions/user-session-12345:detectIntent'; // Corrige la URL
+const API_KEY = 'AIzaSyBL9AONfGo4oqDbOhIZ2-rd0FdIfdB9ezk';  // Asegúrate de que esta clave sea válida
 
 // Función para enviar una solicitud de texto a Dialogflow
 async function sendToDialogflow(queryText) {
-  const sessionId = '123456'; // Puedes usar un ID único para cada sesión
+  const sessionId = 'user-session-12345'; // Puedes usar un ID único para cada sesión
   const response = await fetch(`${API_URL}?key=${API_KEY}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      session: `projects/YOUR_PROJECT_ID/agent/sessions/${sessionId}`,
+      session: `projects/galvanic-idiom-443423-p6/agent/sessions/${sessionId}`, // Reemplaza con tu ID de proyecto
       queryInput: {
         text: {
           text: queryText,  // El texto que el usuario ingresa
