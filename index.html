@@ -15,7 +15,6 @@
             </div>
             <div class="p-4">
                 <div id="chat-window" class="h-96 overflow-y-scroll border border-gray-700 p-2 mb-4 bg-gray-700">
-                    <!-- Conversaciones -->
                     <div class="mb-2">
                         <div class="text-gray-300">
                             <strong>Usuario:</strong> Hola, ¿cómo estás?
@@ -56,6 +55,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script>
         const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = 'es-ES';
@@ -136,7 +136,6 @@
         }
 
         function getBrokiResponse(userInput) {
-            // Aquí iría la llamada a la API de ChatGPT para obtener la respuesta
             const brokiResponse = 'Esta es una respuesta simulada de Broki.';
 
             const chatWindow = document.getElementById('chat-window');
@@ -146,7 +145,6 @@
             chatWindow.appendChild(brokiMessage);
             chatWindow.scrollTop = chatWindow.scrollHeight;
 
-            // Guardar la conversación en el almacenamiento local para personalización futura
             const conversation = {
                 user: userInput,
                 broki: brokiResponse
@@ -155,7 +153,6 @@
             conversations.push(conversation);
             localStorage.setItem('conversations', JSON.stringify(conversations));
 
-            // Convertir la respuesta de Broki a voz con voz masculina
             const utterance = new SpeechSynthesisUtterance(brokiResponse);
             utterance.lang = 'es-ES';
             const voices = window.speechSynthesis.getVoices();
@@ -166,13 +163,11 @@
             window.speechSynthesis.speak(utterance);
         }
 
-        // Cargar las voces disponibles
         window.speechSynthesis.onvoiceschanged = () => {
             const voices = window.speechSynthesis.getVoices();
             console.log(voices);
         };
 
-        // Cargar conversaciones previas al iniciar
         window.addEventListener('load', () => {
             const conversations = JSON.parse(localStorage.getItem('conversations')) || [];
             const chatWindow = document.getElementById('chat-window');
