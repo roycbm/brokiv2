@@ -29,7 +29,7 @@
 
   <script>
     const API_URL = 'https://dialogflow.googleapis.com/v2/projects/your-project-id/agent/sessions/your-session-id:detectIntent'; 
-    const API_KEY = 'YOUR_API_KEY'; // Sustituye por tu clave de API (mueve esto al backend en un entorno real)
+    const API_KEY = 'AIzaSyBL9AONfGo4oqDbOhIZ2-rd0FdIfdB9ezk'; // Sustituye por tu clave de API (mueve esto al backend en un entorno real)
 
     // Función para enviar la solicitud de texto a Dialogflow
     async function sendToDialogflow(queryText) {
