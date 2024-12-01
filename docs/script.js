@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.tidioChatApi.on('message', function(message) {
         // Verifica si el mensaje es de Tidio
         if (message.sender === 'bot') {
-            // Agregar el mensaje al input de texto
+            // Agregar el mensaje al textarea
             const textInput = document.getElementById('text-input');
-            textInput.value += `\n${message.text}`; // Agrega el texto del mensaje
+            textInput.value += `\nBot: ${message.text}`; // Agrega el texto del mensaje
             textInput.scrollTop = textInput.scrollHeight; // Desplazar hacia abajo
         }
     });
